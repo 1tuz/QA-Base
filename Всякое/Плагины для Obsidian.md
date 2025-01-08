@@ -2,11 +2,13 @@
 
 |Name|Author|Version|Description|
 |----|------|-------|---|
+|[**Git**](https://obsidian.md/plugins?id=obsidian-git) [⬇️](obsidian://SP-install?id=obsidian-git&enable=true)|[Vinzent](https://github.com/Vinzent03) [♡](https://ko-fi.com/vinzent)|2.31.1|Integrate Git version control with automatic...|
 |[**Advanced Tables**](https://obsidian.md/plugins?id=table-editor-obsidian) [⬇️](obsidian://SP-install?id=table-editor-obsidian&enable=true)|[Tony Grosinger](https://grosinger.net) [♡](https://github.com/sponsors/tgrosinger)/[♡](https://buymeacoffee.com/tgrosinger)/[♡](https://paypal.me/tgrosinger)|0.22.1|Improved table navigation, formatting, manipulatio...|
 |[**Calendar**](https://obsidian.md/plugins?id=calendar) [⬇️](obsidian://SP-install?id=calendar&enable=true)|[Liam Cain](https://github.com/liamcain/)|1.5.10|Calendar view of your daily notes|
 |[**Dataview**](https://obsidian.md/plugins?id=dataview) [⬇️](obsidian://SP-install?id=dataview&enable=true)|[Michael Brenan](https://github.com/blacksmithgu)|0.5.67|Complex data views for the data-obsessed.|
 |[**Kanban**](https://obsidian.md/plugins?id=obsidian-kanban) [⬇️](obsidian://SP-install?id=obsidian-kanban&enable=true)|[mgmeyers](https://github.com/mgmeyers/obsidian-kanban)|2.0.51|Create markdown-backed Kanban boards in Obsidian.|
 |[**Linter**](https://obsidian.md/plugins?id=obsidian-linter) [⬇️](obsidian://SP-install?id=obsidian-linter&enable=true)|[Victor Tao](https://github.com/platers)|1.28.0|Formats and styles your notes. It can be used...|
+|[**MAKE.md**](https://obsidian.md/plugins?id=make-md) [⬇️](obsidian://SP-install?id=make-md&enable=true)|[MAKE.md](https://www.make.md)|1.0.3|Make.md gives you everything you need to organize ...|
 |[**Omnisearch**](https://obsidian.md/plugins?id=omnisearch) [⬇️](obsidian://SP-install?id=omnisearch&enable=true)|[Simon Cambier](https://github.com/scambier/obsidian-omnisearch) [♡](https://github.com/sponsors/scambier)/[♡](https://ko-fi.com/scambier)|1.25.2|A search engine that just works|
 |[**Paste URL into selection**](https://obsidian.md/plugins?id=url-into-selection) [⬇️](obsidian://SP-install?id=url-into-selection&enable=true)||1.7.0|Paste URL "into" selected text.|
 |[**Persistent Graph**](https://obsidian.md/plugins?id=persistent-graph) [⬇️](obsidian://SP-install?id=persistent-graph&enable=true)|[Sanqui](https://sanqui.net)|0.1.5|Adds commands to save and restore the positions...|
@@ -21,5 +23,4 @@
 |[**Excalidraw**](https://obsidian.md/plugins?id=obsidian-excalidraw-plugin) [⬇️](obsidian://SP-install?id=obsidian-excalidraw-plugin&enable=true)|[Zsolt Viczian](https://www.zsolt.blog) [♡](https://ko-fi.com/zsolt)|2.7.5|An Obsidian plugin to edit and view Excalidraw...|
 |[**Outliner**](https://obsidian.md/plugins?id=obsidian-outliner) [⬇️](obsidian://SP-install?id=obsidian-outliner&enable=true)|[Viacheslav Slinko](https://github.com/vslinko)|4.8.1|Work with your lists like in Workflowy or...|
 |[**Iconic**](https://obsidian.md/plugins?id=iconic) [⬇️](obsidian://SP-install?id=iconic&enable=true)|[Holo](https://github.com/gfxholo)|1.0.15|Customize your icons and their colors directly...|
-|[**MAKE.md**](https://obsidian.md/plugins?id=make-md) [⬇️](obsidian://SP-install?id=make-md&enable=true)|[MAKE.md](https://www.make.md)|1.0.3|Make.md gives you everything you need to organize ...|
-|[**Git**](https://obsidian.md/plugins?id=obsidian-git) [⬇️](obsidian://SP-install?id=obsidian-git&enable=true)|[Vinzent](https://github.com/Vinzent03) [♡](https://ko-fi.com/vinzent)|2.31.1|Integrate Git version control with automatic...|
+|[**Execute Code**](https://obsidian.md/plugins?id=execute-code) [⬇️](obsidian://SP-install?id=execute-code&enable=true)|[twibiral](https://www.github.com/twibiral)|2.0.0|Allows to execute code snippets within a note....|
