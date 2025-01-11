@@ -35,3 +35,4 @@ https://www.youtube.com/watch?v=DjsTreMcXcQ  - по интерфейсу AS
 https://www.youtube.com/watch?v=dP8IBDRxrsg - особенности тестирования мобил. прил. 
 
 ![[Pasted image 20250111163056.png]]
+Все есть в эмуляторах. 
