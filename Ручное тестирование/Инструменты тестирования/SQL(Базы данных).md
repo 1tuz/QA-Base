@@ -204,7 +204,7 @@ INNER JOIN products p ON o.product_id = p.product_id;
 
 #### **Дополнительно**
 
-1. **Индексы:** Ускоряют поиск данных:
+1. **Индексы:** Ускоряют поиск данных: Ускорение поиска получения выборки
     
     ```sql
     CREATE INDEX idx_user_name ON users(name);
