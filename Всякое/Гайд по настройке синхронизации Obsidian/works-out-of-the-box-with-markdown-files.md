@@ -1,3 +1,3 @@
 - URL paths are generated based on the folder structure and file names
 - Links to attachments/images automatically work
-- [[1. accepted-markdown-metadata|Metadata]] can also be passed into the blog
+- [[accepted-markdown-metadata|Metadata]] can also be passed into the blog
