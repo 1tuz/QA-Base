@@ -2,8 +2,6 @@
 aliases:
   - Cookie + Cache + Local\Session storage
 ---
-**Краткий вариант:**
-
  #Cookie #Cache #LocalStorage #SessionStorage #ВебХранилище #web 
 #### 🍪 **Cookie**
 - Небольшие файлы (до **4 KB**), хранятся браузером для сайта.
