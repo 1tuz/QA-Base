@@ -1,5 +1,3 @@
-# **Обзор архитектур API**
-
 #mobile #QA #API #Architecture
 
 🔹 **REST (Representational State Transfer)**  
