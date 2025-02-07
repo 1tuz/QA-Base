@@ -1,6 +1,6 @@
 
 
-#mobile #QA #Android #iOS #PushNotifications
+#mobile #QA #Android #iOS #PushNotifications #Пуши
 
 🔹 **Foreground Push** – приходит, когда приложение активно.
 
