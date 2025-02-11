@@ -59,4 +59,4 @@
 
 - Background Fetch – периодическое обновление данных.
 - Push Notifications – запуск приложения через silent push.
-- VoIP, Audio, Location – фоновые режимы с ограничениями.
+- VoIP, Audio, Location – фоновые режимы с ограничениями.rest
