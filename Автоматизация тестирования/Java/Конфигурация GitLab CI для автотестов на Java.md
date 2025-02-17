@@ -1,4 +1,4 @@
-#gitlab #CI/CD #CI #Автотесты #java
+[]()#gitlab #CI/CD #CI #Автотесты #java
 
 ## **КРАТКО**
 
