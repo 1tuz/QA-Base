@@ -12,7 +12,7 @@
 ✅ **Работа с ветками**
 
 - `git branch` — список веток.
-- `git checkout branch_name` — переключение на ветку.
+- `git checkout branch_name` — переключение на ветку. (switch)
 - `git checkout -b new_branch` — создать и перейти в новую ветку.
 
 ✅ **Обновление и слияние**
