@@ -1,125 +1,170 @@
-#java #ООП #игры #инкапсуляция #наследование #полиморфизм #абстракция
-## 🎮 Все концепции ООП в Java на примере RPG-игры
-Демонстрация 4 принципов объектно-ориентированного программирования
+#java #ООП #наследование #классы #игры
+
+## 🎮 RPG-система классов на Java с Dark Souls-статистикой
+
+**Базовый класс персонажа с дефолтными параметрами:**
 
 ```java
+public class Character {
+    protected String name;
+    protected int level;
+    protected int vitality;
+    protected int endurance;
+    protected int strength;
+    protected int dexterity;
+    protected int intelligence;
+    protected int faith;
 
-// 1. ИНКАПСУЛЯЦИЯ
-class Character {
-    private String name;
-    private int health;
-    
-    public Character(String name, int health) {
+    protected int maxHealth;
+    protected int stamina;
+    protected int equipLoad;
+
+    public Character(String name, int level, int vitality, int endurance, int strength,
+                     int dexterity, int intelligence, int faith) {
         this.name = name;
-        setHealth(health);
-    }
-    
-    public void setHealth(int health) {
-        if(health < 0) throw new IllegalArgumentException();
-        this.health = health;
-    }
-    
-    public String getName() { 
-        return name; 
-    }
-    
-    public int getHealth() { 
-        return health; 
-    }
-    
-    public void takeDamage(int damage) {
-        setHealth(health - damage);
-    }
-}
-
-// 2. НАСЛЕДОВАНИЕ
-class Warrior extends Character {
-    private int strength;
-    
-    public Warrior(String name, int health, int strength) {
-        super(name, health);
+        this.level = level;
+        this.vitality = vitality;
+        this.endurance = endurance;
         this.strength = strength;
-    }
-    
-    public void smash() {
-        System.out.println(getName() + " крушит врагов!");
-    }
-}
+        this.dexterity = dexterity;
+        this.intelligence = intelligence;
+        this.faith = faith;
 
-// 3. ПОЛИМОРФИЗМ
-interface Attackable {
-    void attack();
-}
-
-class Mage extends Character implements Attackable {
-    private int mana;
-    
-    public Mage(String name, int health, int mana) {
-        super(name, health);
-        this.mana = mana;
+        calculateStats();
     }
-    
-    @Override
-    public void attack() {
-        System.out.println(getName() + " запускает огненный шар!");
+
+    protected void calculateStats() {
+        maxHealth = vitality * 10 + 50;
+        stamina = endurance * 5;
+        equipLoad = strength * 3;
+    }
+
+    public void showStats() {
+        System.out.printf("\n⚡ %s (Ур. %d)\n", name, level);
+        System.out.printf("❤️ Здоровье: %d | 🏃‍♂️ Стамина: %d\n", maxHealth, stamina);
+        System.out.printf("📦 Грузоподъёмность: %dкг\n", equipLoad);
+        System.out.println("\n⚔️ Основные параметры:");
+        System.out.printf("💪 Сила: %d | 🏹 Ловкость: %d\n", strength, dexterity);
+        System.out.printf("🔮 Интеллект: %d | ✨ Вера: %d\n", intelligence, faith);
     }
 }
-
-// 4. АБСТРАКЦИЯ
-abstract class NPC {
-    public abstract void interact();
-}
-
-class Merchant extends NPC {
-    @Override
-    public void interact() {
-        System.out.println("Торговец: Что желаете купить?");
-    }
-}
-
-// Пример использования
-public class Main {
-    public static void main(String[] args) {
-        Character hero = new Character("Герой", 100);
-        hero.takeDamage(20);
-        
-        Warrior conan = new Warrior("Конан", 150, 15);
-        conan.smash();
-        
-        Attackable gandalf = new Mage("Гендальф", 80, 200);
-        gandalf.attack();
-        
-        NPC trader = new Merchant();
-        trader.interact();
-    }
-}
-
-/*
-Вывод программы:
-Здоровье героя: 80
-Конан крушит врагов!
-Гендальф запускает огненный шар!
-Торговец: Что желаете купить?
-*/
-
 ```
 
-## Основные концепции:
+---
 
-| Элемент          | Пример из кода                 | Подробное описание                                                                 |
-|-------------------|---------------------------------|-----------------------------------------------------------------------------------|
-| **Класс**         | `class Character { ... }`       | Базовый строительный блок ООП. Инкапсулирует состояние (поля) и поведение (методы). Пример: `Character hero = new Character("Герой", 100);` |
-| **Наследование**  | `class Warrior extends Character` | Механизм создания иерархии классов. Дочерний класс (Warrior) наследует поля/методы родителя (Character) и может их расширять. Пример: `Warrior conan = new Warrior(...);` |
-| **Интерфейс**     | `interface Attackable { ... }`  | Контракт, который классы должны реализовать. Содержит абстрактные методы (без реализации). Пример: `class Mage implements Attackable` |
-| **Инкапсуляция**  | `private String name;`          | Сокрытие внутреннего состояния объекта. Поля объявляются `private`, доступ — через методы (геттеры/сеттеры). |
-| **Полиморфизм**   | `@Override public void attack()` | Возможность объектов разных классов выполнять одинаковые действия разными способами. Пример: `mage.attack()` vs `warrior.attack()` |
-| **Абстракция**    | `abstract class NPC { ... }`    | Создание шаблонов с нереализованными методами. Нельзя создать экземпляр абстрактного класса. Пример: `abstract void interact();` |
-| **Конструктор**   | `public Warrior(...) { ... }`  | Специальный метод для инициализации объекта. Вызывается при создании экземпляра (`new`). Может вызывать `super()` для инициализации родителя. |
-| **Геттер**        | `public int getHealth() { ... }` | Метод для безопасного чтения приватных полей. Возвращает значение. Пример: `hero.getHealth()` → 100 |
-| **Сеттер**        | `public void setHealth(int h) { ... }` | Метод для безопасной модификации приватных полей. Может включать валидацию. Пример: `hero.setHealth(hero.getHealth() - 20);` |
+**Подклассы с наследованием и переопределением параметров по умолчанию:**
 
+**Warrior.java**
 
-1. Инкапсуляция - сокрытие данных через private поля и методы доступа
-2. Наследование - расширение функционала через extends
-3. Полиморфизм - разные реализации методов через интерфейсы и @Override
-4. Абстракция - использование abstract классов для определения шаблонов
+```java
+public class Warrior extends Character {
+    private String weaponType;
+
+    public Warrior(String name, int level) {
+        super(name, level, 40, 25, 35, 8, 10, 10);
+        this.weaponType = "Двуручное оружие";
+    }
+
+    public String powerAttack() {
+        stamina -= 30;
+        return name + " бьёт с разворота! (🗡️" + (strength * 3) + " урона)";
+    }
+}
+```
+
+**Paladin.java**
+
+```java
+public class Paladin extends Character {
+    public Paladin(String name, int level) {
+        super(name, level, 35, 30, 30, 10, 10, 40);
+    }
+
+    public String holyLight() {
+        stamina -= 25;
+        maxHealth += 50;
+        return "✨ " + name + " призывает святой свет! (+50 HP)";
+    }
+}
+```
+
+**Archer.java**
+
+```java
+public class Archer extends Character {
+    public Archer(String name, int level) {
+        super(name, level, 25, 40, 15, 45, 10, 10);
+    }
+
+    public String rapidShot() {
+        stamina -= 15;
+        return "🏹 " + name + " выпускает 3 стрелы! (➹" + (dexterity * 2) + " урона каждая)";
+    }
+}
+```
+
+**Cleric.java**
+
+```java
+public class Cleric extends Character {
+    public Cleric(String name, int level) {
+        super(name, level, 30, 15, 10, 10, 25, 45);
+    }
+
+    public String healParty() {
+        stamina -= 40;
+        return "🌿 " + name + " исцеляет союзников! (+" + (faith * 2) + " HP)";
+    }
+}
+```
+
+---
+
+**⚙️ Пример использования:**
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Paladin paladin = new Paladin("Паладин", 25);
+        Archer archer = new Archer("Леголас", 20);
+
+        System.out.println(paladin.holyLight());
+        System.out.println(archer.rapidShot());
+        paladin.showStats();
+    }
+}
+```
+
+**Консольный вывод:**
+
+```
+✨ Паладин призывает святой свет! (+50 HP)
+🏹 Леголас выпускает 3 стрелы! (➹90 урона каждая)
+
+⚡ Паладин (Ур. 25)
+❤️ Здоровье: 400 | 🏃‍♂️ Стамина: 150
+📦 Грузоподъёмность: 90кг
+
+⚔️ Основные параметры:
+💪 Сила: 30 | 🏹 Ловкость: 10
+🔮 Интеллект: 10 | ✨ Вера: 40
+```
+
+---
+
+**🔍 Ключевые концепции Java-ООП:**
+
+- **this:** доступ к текущему объекту.
+- **super:** вызов конструктора родительского класса.
+- **Наследование:** расширение функционала базового класса.
+- **Инкапсуляция:** скрытие реализации (например, расчёт характеристик в методе `calculateStats()`).
+- **Полиморфизм:** переопределение поведения методов.
+
+---
+
+**📌 Советы по архитектуре на Java:**
+
+- Каждый класс в отдельном файле.
+- Используй модификаторы доступа (`private`, `protected`).
+- Логика расчётов в отдельных методах.
+- Для кастомизации можешь использовать Builder-паттерн или перегрузку конструкторов.
