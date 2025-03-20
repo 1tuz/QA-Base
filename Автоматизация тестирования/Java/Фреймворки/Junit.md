@@ -10,3 +10,4 @@
 ✅ **Assertions (`assertEquals`, `assertTrue`, `assertThrows`)** — проверки.  
 ✅ **`@Tag`** — группировка тестов.  
 ✅ **`@Disabled`** — отключение теста.
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
