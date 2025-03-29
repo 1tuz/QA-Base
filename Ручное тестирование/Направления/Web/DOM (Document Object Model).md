@@ -1,6 +1,5 @@
 ---
-aliases:
-  - DOM (Document Object Model)
+aliases: []
 ---
 Это объектная модель документа, созданная браузером в памяти ПК на основании HTML-кода, полученного от сервера.
-![[Pasted image 20250329220750.png]]
+![[Excalidraw/Drawing 2025-03-29 22.15.09.excalidraw|1000]]
