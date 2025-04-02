@@ -1,4 +1,4 @@
-[[Cookie + Cache + Local + Session storage|Cookie + Cache + Local\Session storage]]
+[[Cookie + Cache + Local storage + Session storage|Cookie + Cache + Local\Session storage]]
 [[Аутентификация и авторизация]]
 [[Особенности Web]]
 [[Что происходит на фронте при нажатии на кнопку и галочку]]
